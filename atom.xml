@@ -6,7 +6,7 @@
   <link href="https://windcrain.top/atom.xml" rel="self"/>
   
   <link href="https://windcrain.top/"/>
-  <updated>2022-06-10T11:59:12.120Z</updated>
+  <updated>2022-06-19T05:34:18.794Z</updated>
   <id>https://windcrain.top/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阿里云盘挂载到本地硬盘</title>
+    <link href="https://windcrain.top/post/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98/"/>
+    <id>https://windcrain.top/post/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98/</id>
+    <published>2022-06-17T13:02:38.137Z</published>
+    <updated>2022-06-19T05:34:18.794Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    这款开源的工具，支持的网盘特别多，有阿里、天翼、蓝奏、Onedrive、夸克、某大厂、123、迅雷云盘等等23种网盘之多。而这么多的网盘，操作方法基本相同，不同之处，可以查看作者官方网址：</p><p><a href="https://alist-doc.nn.ci/docs/driver/aliyundrive">https://alist-doc.nn.ci/docs/driver/aliyundrive</a></p><h2 id="安装Alist"><a href="#安装Alist" class="headerlink" title="安装Alist"></a>安装Alist</h2><p>打开<a href="https://github.com/Xhofe/alist/releases">AList Release</a>下载要部署的系统对应的文件。</p><p>直接解压获取到的 zip 压缩包，启动 alist-xxxx.exe 即可。</p><p>当看到输出<code>start server @ 0.0.0.0:5244</code>且之后没有报错后，就表示运行成功了，首次运行会输出初始密码，程序默认监听5244端口。<u><em>（移动程序目录，会改变初始密码）</em></u></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172121978.png" alt="image-20220617212115468"></p><h2 id="打开网址"><a href="#打开网址" class="headerlink" title="打开网址"></a>打开网址</h2><p>现在打开<code>http://127.0.0.1:5244</code>就可以看见登陆页面了，使用上图Your password的密码登录。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172122809.png" alt="image-20220617212250721"></p><p>登录成功后的界面。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172124374.png" alt="image-20220617212433256"></p><h2 id="添加账号"><a href="#添加账号" class="headerlink" title="添加账号"></a>添加账号</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172126137.png" alt="image-20220617212617024"></p><p>选择阿里云盘</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172136276.png" alt="image-20220617213649181"></p><h2 id="令牌获取"><a href="#令牌获取" class="headerlink" title="令牌获取"></a>令牌获取</h2><p>打开下面的网址</p><p><a href="https://alist-doc.nn.ci/docs/driver/aliyundrive">https://alist-doc.nn.ci/docs/driver/aliyundrive</a></p><p>然后点击【Get Token】。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172128444.png" alt="image-20220617212856347"></p><p>先点击上面的按钮，然后用手机端的阿里客户端扫描二维码，扫描以后，再点击上面的按钮。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172133628.png" alt="image-20220617213349569"></p><p>然后在二维码下面就有一串的口令，复制这段口令。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172132155.png" alt="image-20220617213209059"></p><h2 id="填写令牌"><a href="#填写令牌" class="headerlink" title="填写令牌"></a>填写令牌</h2><p>将令牌填入，点击保存。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172137573.png" alt="image-20220617213748488"></p><p>接着，我们进入到<a href="http://127.0.0.1:5244/页面，在这里，我们的网盘就加载进来了。">http://127.0.0.1:5244/页面，在这里，我们的网盘就加载进来了。</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172141564.png" alt="image-20220617214112491"></p><h2 id="安装RaiDrive"><a href="#安装RaiDrive" class="headerlink" title="安装RaiDrive"></a><strong>安装RaiDrive</strong></h2><p>可以从官网下载<a href="https://www.raidrive.com/">RaiDrive</a>，速度较慢。</p><p>也可以从这里下载</p><p><a href="https://wwb.lanzouj.com/b03j1mo1g">https://wwb.lanzouj.com/b03j1mo1g</a><br>密码:4xa3</p><p>下载完，直接安装即可。</p><h2 id="配置挂载参数"><a href="#配置挂载参数" class="headerlink" title="配置挂载参数"></a><strong>配置挂载参数</strong></h2><p>运行软件，点击Add。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172201830.png" alt="image-20220617220111734"></p><p>然后在这里依次选：NAS，WebDAV，去掉Address后面方框的勾，地址填：127.0.0.1，端口填：5244，路径填：dav。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172203843.png![image-20220617220927579](https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172209703.png" alt="图片"></p><p>上图中的7和8处，是用户名和密码，这里需要到Alist管理中(<a href="http://127.0.0.1:5244/@manage/settings/0)的“**设置-后端**”处，找到用户名和密码，复制粘贴到上图的7和8处，最后点“Connect”">http://127.0.0.1:5244/@manage/settings/0)的“**设置-后端**”处，找到用户名和密码，复制粘贴到上图的7和8处，最后点“Connect”</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172205825.png" alt="image-20220617220524666"></p><p>然后可以在电脑中看到已经成功挂载。</p><p><em>网盘的大小显示错误，但并不影响使用</em></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206172211815.png" alt="image-20220617221119763"></p>]]></content>
+    
+    
+    <summary type="html">网盘挂载到本地硬盘</summary>
+    
+    
+    
+    <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="网盘" scheme="https://windcrain.top/tags/%E7%BD%91%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>This request has been blocked； the content must be served over HTTPS.</title>
     <link href="https://windcrain.top/post/this-request-has-been-blocked-the-content-must-be-served-over-https/"/>
     <id>https://windcrain.top/post/this-request-has-been-blocked-the-content-must-be-served-over-https/</id>
     <published>2022-06-08T05:31:54.000Z</published>
-    <updated>2022-06-10T11:59:12.120Z</updated>
+    <updated>2022-06-17T03:28:02.308Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="一、错误信息"><a href="#一、错误信息" class="headerlink" title="一、错误信息"></a>一、错误信息</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This request has been blocked; the <span class="attribute">content</span> must be served over HTTPS.</span><br></pre></td></tr></table></figure><h3 id="二、错误原因"><a href="#二、错误原因" class="headerlink" title="二、错误原因"></a>二、错误原因</h3><p>1、Http与Https混合使用<br>        项目生产环境使用的是https协议，某页面嵌入第三方连接，通过ajax调用相关接口获取信息实现登陆第三方系统，第三方系统暂未升级使用https，故在页面点击链接时出现上述错误信息。</p><h3 id="三、解决方法"><a href="#三、解决方法" class="headerlink" title="三、解决方法"></a>三、解决方法</h3><p>1、将所有系统的协议都升级为https协议；</p><p>2、在引入第三方url的页面添加如下信息：</p><p>通过在网页 head 中添加标签</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;<span class="attribute">Content</span>-Security-Policy&quot; <span class="attribute">content</span>=&quot;upgrade-insecure-requests&quot;&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This request has been blocked; the <span class="attribute">content</span> must be served over HTTPS.</span><br></pre></td></tr></table></figure><h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>1、Http与Https混合使用<br>        项目生产环境使用的是https协议，某页面嵌入第三方连接，通过ajax调用相关接口获取信息实现登陆第三方系统，第三方系统暂未升级使用https，故在页面点击链接时出现上述错误信息。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1、将所有系统的协议都升级为https协议；</p><p>2、在引入第三方url的页面添加如下信息：</p><p>通过在网页 head 中添加标签</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;<span class="attribute">Content</span>-Security-Policy&quot; <span class="attribute">content</span>=&quot;upgrade-insecure-requests&quot;&gt;</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">This request has been blocked； the content must be served over HTTPS.</summary>
@@ -39,12 +60,12 @@
   
   <entry>
     <title>使用Hexo+GitHub搭建个人博客</title>
-    <link href="https://windcrain.top/post/shi-yong-hexogithub-da-jian-ge-ren-bo-ke/"/>
-    <id>https://windcrain.top/post/shi-yong-hexogithub-da-jian-ge-ren-bo-ke/</id>
+    <link href="https://windcrain.top/post/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://windcrain.top/post/%E4%BD%BF%E7%94%A8Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-06-07T06:35:56.000Z</published>
-    <updated>2022-06-10T06:51:33.769Z</updated>
+    <updated>2022-06-17T03:27:06.409Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="安装相关工具"><a href="#安装相关工具" class="headerlink" title="安装相关工具"></a>安装相关工具</h3><h4 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h4><h4 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h4><p>打开cmd命令行(win+r 输入cmd回车)分别执行</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure><p>如果都可以成功运行出现版本信息证明安装成功。</p><h4 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h4><p>必须按照步骤来，因为hexo需要使用node.js的npm命令。<br>在合适的地方新建一个文件夹，用来存放自己的博客文件，在目录下右键点击<code>Git Bash Here</code>，然后输入</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure><p>等待安装hexo完成后，输入</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><p>检查是否安装成功。</p><h4 id="4-在github上创建并设置远程库"><a href="#4-在github上创建并设置远程库" class="headerlink" title="4.在github上创建并设置远程库"></a>4.在github上创建并设置远程库</h4><h4 id="5-初始化Hexo"><a href="#5-初始化Hexo" class="headerlink" title="5.初始化Hexo"></a>5.初始化Hexo</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init C:/hexo </span><br><span class="line">cd C:/hexo</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>依次输入上面三条语句</p><p>接着输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<a href="http://localhost:4000/，效果如下：">http://localhost:4000/，效果如下：</a></p><p><a href="https://imgtu.com/i/X0L9pD"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437977.png" alt="X0L9pD.png"></a></p><h3 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h3><p>回到你的git bash中，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p><p>可以用以下两条，检查一下你有没有输对</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure><p>然后创建SSH,一路回车</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p><p><a href="https://imgtu.com/i/X0X8YV"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437978.png" alt="X0X8YV.png"></a></p><p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p><p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。</p><p><a href="https://imgtu.com/i/X0jQje"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437979.png" alt="X0jQje.png"></a></p><p>在gitbash中，查看是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><h3 id="将hexo部署到GitHub"><a href="#将hexo部署到GitHub" class="headerlink" title="将hexo部署到GitHub"></a>将hexo部署到GitHub</h3><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p><p>注意deploy时可能要你输入username和password。</p><p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io">http://yourname.github.io</a> 这个网站看到你的博客了！！</p><p><a href="https://imgtu.com/i/X0v12T"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437980.png" alt="X0v12T.png"></a></p><h3 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h3><p>现在你的个人网站的地址是 yourname.github.io，如果觉得这个网址逼格不太够，这就需要你设置个人域名了。但是需要花钱。</p><p>你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p><p>点解析进去，添加解析。</p><p>其中，192.30.252.153 和 192.30.252.154 是GitHub的服务器地址。<br>解析线路选择默认。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071146026.png" alt="image-20220607114636904"></p><p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071148365.png" alt="image-20220607114800278"></p><p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071149229.png" alt="image-20220607114907178"></p><p>最后，在gitbash中，输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！</p><p>接下来你就可以正式开始写文章了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new newpapername</span><br></pre></td></tr></table></figure><p>然后在source/_post中打开markdown文件，就可以开始编辑了。当你写完的时候，再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>就可以看到更新了。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="安装相关工具"><a href="#安装相关工具" class="headerlink" title="安装相关工具"></a>安装相关工具</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>打开cmd命令行(win+r 输入cmd回车)分别执行</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure><p>如果都可以成功运行出现版本信息证明安装成功。</p><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>必须按照步骤来，因为hexo需要使用node.js的npm命令。<br>在合适的地方新建一个文件夹，用来存放自己的博客文件，在目录下右键点击<code>Git Bash Here</code>，然后输入</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure><p>等待安装hexo完成后，输入</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><p>检查是否安装成功。</p><h3 id="在github上创建并设置远程库"><a href="#在github上创建并设置远程库" class="headerlink" title="在github上创建并设置远程库"></a>在github上创建并设置远程库</h3><h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init C:/hexo </span><br><span class="line">cd C:/hexo</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>依次输入上面三条语句</p><p>接着输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<a href="http://localhost:4000/，效果如下：">http://localhost:4000/，效果如下：</a></p><p><a href="https://imgtu.com/i/X0L9pD"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437977.png" alt="X0L9pD.png"></a></p><h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><p>回到你的git bash中，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p><p>可以用以下两条，检查一下你有没有输对</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure><p>然后创建SSH,一路回车</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure><p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p><p><a href="https://imgtu.com/i/X0X8YV"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437978.png" alt="X0X8YV.png"></a></p><p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p><p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。</p><p><a href="https://imgtu.com/i/X0jQje"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437979.png" alt="X0jQje.png"></a></p><p>在gitbash中，查看是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><h2 id="将hexo部署到GitHub"><a href="#将hexo部署到GitHub" class="headerlink" title="将hexo部署到GitHub"></a>将hexo部署到GitHub</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p><p>注意deploy时可能要你输入username和password。</p><p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io">http://yourname.github.io</a> 这个网站看到你的博客了！！</p><p><a href="https://imgtu.com/i/X0v12T"><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071437980.png" alt="X0v12T.png"></a></p><h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><p>现在你的个人网站的地址是 yourname.github.io，如果觉得这个网址逼格不太够，这就需要你设置个人域名了。但是需要花钱。</p><p>你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。</p><p>点解析进去，添加解析。</p><p>其中，192.30.252.153 和 192.30.252.154 是GitHub的服务器地址。<br>解析线路选择默认。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071146026.png" alt="image-20220607114636904"></p><p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071148365.png" alt="image-20220607114800278"></p><p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071149229.png" alt="image-20220607114907178"></p><p>最后，在gitbash中，输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！</p><p>接下来你就可以正式开始写文章了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new newpapername</span><br></pre></td></tr></table></figure><p>然后在source/_post中打开markdown文件，就可以开始编辑了。当你写完的时候，再</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>就可以看到更新了。</p>]]></content>
     
     
     <summary type="html">使用Hexo+Github搭建个人博客</summary>
@@ -54,9 +75,9 @@
     <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="Hexo" scheme="https://windcrain.top/tags/Hexo/"/>
-    
     <category term="GitHub" scheme="https://windcrain.top/tags/GitHub/"/>
+    
+    <category term="Hexo" scheme="https://windcrain.top/tags/Hexo/"/>
     
   </entry>
   
@@ -65,9 +86,9 @@
     <link href="https://windcrain.top/post/%E4%BD%BF%E7%94%A8%20PicGo+GitHub%20%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"/>
     <id>https://windcrain.top/post/%E4%BD%BF%E7%94%A8%20PicGo+GitHub%20%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</id>
     <published>2022-06-07T06:02:38.000Z</published>
-    <updated>2022-06-10T12:00:09.679Z</updated>
+    <updated>2022-06-17T03:24:55.228Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="登录GitHub，创建一个新的仓库（public）；"><a href="#登录GitHub，创建一个新的仓库（public）；" class="headerlink" title="登录GitHub，创建一个新的仓库（public）；"></a>登录GitHub，创建一个新的仓库（public）；</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071400466.png" alt="picgo01"></p><h2 id="安装开源图床工具-PicGo"><a href="#安装开源图床工具-PicGo" class="headerlink" title="安装开源图床工具 PicGo"></a>安装开源图床工具 <a href="https://molunerfinn.com/PicGo/">PicGo</a></h2><p>打开官网，点击免费下载，在Assets下面选择合适的版本下载安装。<br><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071401336.png" alt="picgo02"></p><h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><h5 id="1-Github-创建一个-token"><a href="#1-Github-创建一个-token" class="headerlink" title="1.Github 创建一个 token"></a>1.Github 创建一个 token</h5><p>在GitHub头像处打开 <code>Settings -&gt; Developer settings -&gt; Personal access tokens</code>，最后点击 <code>generate new token</code>；</p><h5 id="2-填写及勾选相关信息，然后点击-Genetate-token-即可；"><a href="#2-填写及勾选相关信息，然后点击-Genetate-token-即可；" class="headerlink" title="2.填写及勾选相关信息，然后点击 Genetate token 即可；"></a>2.填写及勾选相关信息，然后点击 <code>Genetate token</code> 即可；</h5><p>勾选repo</p><h5 id="3-token生成后自行保存"><a href="#3-token生成后自行保存" class="headerlink" title="3.token生成后自行保存"></a>3.token生成后自行保存</h5><p>注意它只会显示一次</p><h5 id="4-配置PicGo"><a href="#4-配置PicGo" class="headerlink" title="4.配置PicGo"></a>4.配置PicGo</h5><p>依次打开 图床设置 -&gt; Github 图床；<br>填写相关信息，最后点击 <code>确定</code>即可，要将其作为默认图床的话，点击设为默认图床；<br><u><strong><em>分支名填master</em></strong></u>（若后续出现问题，可改成main试试）<br><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071401531.png" alt="picgo03"></p><h5 id="5-上传图片，通过上传区上传即可"><a href="#5-上传图片，通过上传区上传即可" class="headerlink" title="5.上传图片，通过上传区上传即可"></a>5.上传图片，通过上传区上传即可</h5><p>Ctrl V 或者将图片拖拽都可以，也可以通过快捷键的方式上传（默认上传键为 <code>Ctrl + Shift + P</code>）</p><h2 id="加速访问"><a href="#加速访问" class="headerlink" title="加速访问"></a>加速访问</h2><p>用 <a href="https://www.jsdelivr.com/">jsDelivr</a> 进行免费加速，在我们 PicGo 图床配置中添加如下自定义域名即可；</p><hr><p>​          <a href="https://cdn.jsdelivr.net/gh/用户名/仓库名@master">https://cdn.jsdelivr.net/gh/用户名/仓库名@master</a></p><hr><h2 id="快捷键修改"><a href="#快捷键修改" class="headerlink" title="快捷键修改"></a>快捷键修改</h2><p>推荐改成 <code>Ctrl + shift +c</code>。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071402109.png" alt="picgo快捷键"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="登录GitHub，创建一个新的仓库（public）；"><a href="#登录GitHub，创建一个新的仓库（public）；" class="headerlink" title="登录GitHub，创建一个新的仓库（public）；"></a>登录GitHub，创建一个新的仓库（public）；</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071400466.png" alt="picgo01"></p><h2 id="安装开源图床工具-PicGo"><a href="#安装开源图床工具-PicGo" class="headerlink" title="安装开源图床工具 PicGo"></a>安装开源图床工具 <a href="https://molunerfinn.com/PicGo/">PicGo</a></h2><p>打开官网，点击免费下载，在Assets下面选择合适的版本下载安装。<br><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071401336.png" alt="picgo02"></p><h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><h3 id="Github-创建一个-token"><a href="#Github-创建一个-token" class="headerlink" title="Github 创建一个 token"></a>Github 创建一个 token</h3><p>在GitHub头像处打开 <code>Settings -&gt; Developer settings -&gt; Personal access tokens</code>，最后点击 <code>generate new token</code>；</p><h3 id="填写及勾选相关信息"><a href="#填写及勾选相关信息" class="headerlink" title="填写及勾选相关信息"></a>填写及勾选相关信息</h3><p>然后点击 <code>Genetate token</code> 即可</p><p>==勾选repo==</p><h3 id="token生成后自行保存"><a href="#token生成后自行保存" class="headerlink" title="token生成后自行保存"></a>token生成后自行保存</h3><p>注意它只会显示一次</p><h3 id="配置PicGo-1"><a href="#配置PicGo-1" class="headerlink" title="配置PicGo"></a>配置PicGo</h3><p>依次打开 图床设置 -&gt; Github 图床；<br>填写相关信息，最后点击 <code>确定</code>即可，要将其作为默认图床的话，点击设为默认图床；<br><u><strong><em>分支名填master</em></strong></u>（若后续出现问题，可改成main试试）<br><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071401531.png" alt="picgo03"></p><h3 id="上传图片，通过上传区上传即可"><a href="#上传图片，通过上传区上传即可" class="headerlink" title="上传图片，通过上传区上传即可"></a>上传图片，通过上传区上传即可</h3><p>Ctrl V 或者将图片拖拽都可以，也可以通过快捷键的方式上传（默认上传键为 <code>Ctrl + Shift + P</code>）</p><h2 id="加速访问（貌似失效）"><a href="#加速访问（貌似失效）" class="headerlink" title="加速访问（貌似失效）"></a><del>加速访问</del>（貌似失效）</h2><p>用 <a href="https://www.jsdelivr.com/">jsDelivr</a> 进行免费加速，在我们 PicGo 图床配置中添加如下自定义域名即可；</p><hr><p>​          <a href="https://cdn.jsdelivr.net/gh/用户名/仓库名@master">https://cdn.jsdelivr.net/gh/用户名/仓库名@master</a></p><hr><h2 id="快捷键修改"><a href="#快捷键修改" class="headerlink" title="快捷键修改"></a>快捷键修改</h2><p>推荐改成 <code>Ctrl + shift +c</code>。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202206071402109.png" alt="picgo快捷键"></p>]]></content>
     
     
     <summary type="html">使用 PicGo+GitHub 搭建免费图床</summary>
@@ -77,9 +98,9 @@
     <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="GitHub" scheme="https://windcrain.top/tags/GitHub/"/>
-    
     <category term="图床" scheme="https://windcrain.top/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="GitHub" scheme="https://windcrain.top/tags/GitHub/"/>
     
   </entry>
   
@@ -106,8 +127,8 @@
   
   <entry>
     <title>C++ Primer(第15章 面向对象程序设计)</title>
-    <link href="https://windcrain.top/post/c-primerdi-15-zhang-mian-xiang-dui-xiang-cheng-xu-she-ji/"/>
-    <id>https://windcrain.top/post/c-primerdi-15-zhang-mian-xiang-dui-xiang-cheng-xu-she-ji/</id>
+    <link href="https://windcrain.top/post/c-primer-di-15-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-15-zhang/</id>
     <published>2022-04-01T05:57:30.000Z</published>
     <updated>2022-06-10T06:42:25.267Z</updated>
     
@@ -127,8 +148,8 @@
   
   <entry>
     <title>C++ Primer(第14章 重载运算与类型转换)</title>
-    <link href="https://windcrain.top/post/c-primer-di-14-zhang-chong-zai-yun-suan-yu-lei-xing-zhuan-huan/"/>
-    <id>https://windcrain.top/post/c-primer-di-14-zhang-chong-zai-yun-suan-yu-lei-xing-zhuan-huan/</id>
+    <link href="https://windcrain.top/post/c-primer-di-14-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-14-zhang/</id>
     <published>2022-03-28T11:57:55.000Z</published>
     <updated>2022-06-10T06:42:14.553Z</updated>
     
@@ -148,8 +169,8 @@
   
   <entry>
     <title>C++ Primer(第13章 拷贝控制)</title>
-    <link href="https://windcrain.top/post/c-xue-xiao/"/>
-    <id>https://windcrain.top/post/c-xue-xiao/</id>
+    <link href="https://windcrain.top/post/c-primer-di-13-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-13-zhang/</id>
     <published>2022-03-24T08:02:13.000Z</published>
     <updated>2022-06-10T12:02:28.319Z</updated>
     
@@ -169,8 +190,8 @@
   
   <entry>
     <title>C++ Primer(第12章 动态内存)</title>
-    <link href="https://windcrain.top/post/cee/"/>
-    <id>https://windcrain.top/post/cee/</id>
+    <link href="https://windcrain.top/post/c-primer-di-12-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-12-zhang/</id>
     <published>2022-03-15T06:27:37.000Z</published>
     <updated>2022-06-10T12:03:05.269Z</updated>
     
@@ -190,8 +211,8 @@
   
   <entry>
     <title>C++ Primer(第11章 关联容器)</title>
-    <link href="https://windcrain.top/post/c-primer-di-11-zhang-guan-lian-rong-qi/"/>
-    <id>https://windcrain.top/post/c-primer-di-11-zhang-guan-lian-rong-qi/</id>
+    <link href="https://windcrain.top/post/c-primer-di-11-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-11-zhang/</id>
     <published>2022-03-14T10:17:43.000Z</published>
     <updated>2022-06-10T12:03:25.952Z</updated>
     
@@ -211,8 +232,8 @@
   
   <entry>
     <title>C++ Primer(第10章 泛型容器)</title>
-    <link href="https://windcrain.top/post/%E7%AC%AC10%E7%AB%A0%20%E6%B3%9B%E5%9E%8B%E5%AE%B9%E5%99%A8/"/>
-    <id>https://windcrain.top/post/%E7%AC%AC10%E7%AB%A0%20%E6%B3%9B%E5%9E%8B%E5%AE%B9%E5%99%A8/</id>
+    <link href="https://windcrain.top/post/c-primer-di-10-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-10-zhang/</id>
     <published>2022-03-13T06:45:47.000Z</published>
     <updated>2022-06-10T12:04:07.397Z</updated>
     
@@ -232,8 +253,8 @@
   
   <entry>
     <title>C++ Primer(第9章 顺序容器)</title>
-    <link href="https://windcrain.top/post/di-jiu-zhang-shun-xu-rong-qi/"/>
-    <id>https://windcrain.top/post/di-jiu-zhang-shun-xu-rong-qi/</id>
+    <link href="https://windcrain.top/post/c-primer-di-9-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-9-zhang/</id>
     <published>2022-03-11T08:48:00.000Z</published>
     <updated>2022-06-10T12:04:21.005Z</updated>
     
@@ -253,8 +274,8 @@
   
   <entry>
     <title>C++ Primer(第8章 IO库)</title>
-    <link href="https://windcrain.top/post/c-primerdi-ba-zhang-io-ku/"/>
-    <id>https://windcrain.top/post/c-primerdi-ba-zhang-io-ku/</id>
+    <link href="https://windcrain.top/post/c-primer-di-8-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-8-zhang/</id>
     <published>2022-03-08T12:03:28.000Z</published>
     <updated>2022-06-10T12:05:06.594Z</updated>
     
@@ -274,8 +295,8 @@
   
   <entry>
     <title>C++ Primer(第7章 类)</title>
-    <link href="https://windcrain.top/post/c-primerdi-qi-zhang-lei/"/>
-    <id>https://windcrain.top/post/c-primerdi-qi-zhang-lei/</id>
+    <link href="https://windcrain.top/post/c-primer-di-7-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-7-zhang/</id>
     <published>2022-03-08T12:02:08.000Z</published>
     <updated>2022-06-10T06:46:31.959Z</updated>
     
@@ -295,8 +316,8 @@
   
   <entry>
     <title>C++ Primer(第6章 函数)</title>
-    <link href="https://windcrain.top/post/c-primer/"/>
-    <id>https://windcrain.top/post/c-primer/</id>
+    <link href="https://windcrain.top/post/c-primer-di-6-zhang/"/>
+    <id>https://windcrain.top/post/c-primer-di-6-zhang/</id>
     <published>2022-03-08T11:57:55.000Z</published>
     <updated>2022-06-10T06:37:12.763Z</updated>
     
