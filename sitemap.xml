@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://windcrain.top/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/</loc>
+    <loc>https://windcrain.top/post/MySQL/</loc>
     
-    <lastmod>2023-03-13</lastmod>
+    <lastmod>2023-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +13,16 @@
   <url>
     <loc>https://windcrain.top/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
-    <lastmod>2022-10-16</lastmod>
+    <lastmod>2023-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://windcrain.top/post/MySQL/</loc>
+    <loc>https://windcrain.top/tags/</loc>
     
-    <lastmod>2022-10-16</lastmod>
+    <lastmod>2023-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -50,15 +50,6 @@
     <loc>https://windcrain.top/post/JAVA01/</loc>
     
     <lastmod>2022-08-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://windcrain.top/tags/</loc>
-    
-    <lastmod>2022-06-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -276,7 +267,7 @@
   </url>
   
   <url>
-    <loc>https://windcrain.top/tags/%E9%94%AE%E7%9B%98/</loc>
+    <loc>https://windcrain.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2023-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -284,13 +275,6 @@
   
   <url>
     <loc>https://windcrain.top/tags/%E7%BD%91%E7%9B%98/</loc>
-    <lastmod>2023-03-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://windcrain.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2023-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
