@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>笔记本键盘禁用</title>
+      <link href="/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/"/>
+      <url>/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>1、搜索cmd，以管理员身份运行命令指令符</p><p>2、输入以下代码，回车确定，重启电脑生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt start= disabled</span><br></pre></td></tr></table></figure><p>tip：若要再次开启笔记本键盘</p><p>输入以下代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt start= auto</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 疑难杂症 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 键盘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>正则表达式</title>
       <link href="/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
       <url>/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
