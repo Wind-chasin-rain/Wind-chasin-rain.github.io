@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>OpenSSL SSL_read：Connection was reset, errno 10054</title>
+      <link href="/post/OpenSSL%20SSL_read%20errno%2010054/"/>
+      <url>/post/OpenSSL%20SSL_read%20errno%2010054/</url>
+      
+        <content type="html"><![CDATA[<p><strong><big>❌  git 报错信息 ：</big></strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OpenSSL SSL_read: Connection was reset, errno 10054 ...</span><br></pre></td></tr></table></figure><p><strong><big>❗   异常信息</big></strong></p><p><code>Git Bash</code> 中，<code>push</code> 或者<code>hexo deploy</code>时，出现错误</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><p><strong><big>⭕  解决方案</big></strong></p><ol><li>邮箱问题</li></ol><p>查看用户名，邮箱</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure><p>修改，用户名，邮箱</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;xxx&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;xxx&quot;</span></span><br></pre></td></tr></table></figure><p>移除仓库，重新添加</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br><span class="line">git remote add origin https:<span class="comment">//github.com/XXX</span></span><br></pre></td></tr></table></figure><ol><li>解除SSL认证</li></ol><p>在 Git Bash 中输入以下命令：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure><ol><li>更新 DNS 缓存</li></ol><p>cmd 窗口输入</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><ol><li>文件过大，超过上限</li></ol><p>修改为 500MB，在 Git Bash 中输入以下命令：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config http.postBuffer <span class="number">5242880003</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 疑难杂症 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>笔记本键盘禁用</title>
       <link href="/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/"/>
       <url>/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/</url>
