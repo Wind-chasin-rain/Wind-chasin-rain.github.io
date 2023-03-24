@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>无需服务器无需域名搭建自己的ChatGPT3.5网站</title>
+      <link href="/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/"/>
+      <url>/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/</url>
+      
+        <content type="html"><![CDATA[<h1 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h1><ol><li><p>ChatGPT的API-KEY<br>获取地址：<br><a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p></li><li><p>注册好的github账号<br>注册地址：<br><a href="https://github.com/">https://github.com/</a></p></li><li><p>注册好的vercel账号<br>用github登录即可，需要手机号验证<br><a href="https://vercel.com/login">https://vercel.com/login</a></p></li><li><p>本开源项目作者的GitHub<br><a href="https://github.com/ddiu8081/chatgpt-demo">https://github.com/ddiu8081/chatgpt-demo</a></p></li></ol><h1 id="搭建开始"><a href="#搭建开始" class="headerlink" title="搭建开始"></a>搭建开始</h1><h2 id="1-打开这个项目"><a href="#1-打开这个项目" class="headerlink" title="1)打开这个项目"></a>1)打开这个项目</h2><p><a href="https://github.com/nezha001/chatgpt-ywsj">https://github.com/nezha001/chatgpt-ywsj</a><br>登录好自己的GitHub账号</p><h2 id="2-点击项目左下侧的Deploy进入Vercel页面"><a href="#2-点击项目左下侧的Deploy进入Vercel页面" class="headerlink" title="2)点击项目左下侧的Deploy进入Vercel页面"></a>2)点击项目左下侧的Deploy进入Vercel页面</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241152265.png" alt=""></p><h2 id="3-然后用github登录成功-需要验证手机号"><a href="#3-然后用github登录成功-需要验证手机号" class="headerlink" title="3)然后用github登录成功(需要验证手机号)"></a>3)然后用github登录成功(需要验证手机号)</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241154700.png" alt=""></p><h2 id="4-选择github"><a href="#4-选择github" class="headerlink" title="4)选择github"></a>4)选择github</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241153222.png" alt=""></p><p>然后自定义一个自己的名称-点击创建</p><h2 id="5-填入自己的chatgpt的api-key，部署即可"><a href="#5-填入自己的chatgpt的api-key，部署即可" class="headerlink" title="5)填入自己的chatgpt的api-key，部署即可"></a>5)填入自己的chatgpt的api-key，部署即可</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241200045.png" alt=""></p><h2 id="6）大约等待1分钟即可成功"><a href="#6）大约等待1分钟即可成功" class="headerlink" title="6）大约等待1分钟即可成功"></a>6）大约等待1分钟即可成功</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241203899.png" alt=""></p><h2 id="7-点击Continue-To-Dashboard进入管理页面"><a href="#7-点击Continue-To-Dashboard进入管理页面" class="headerlink" title="7) 点击Continue To Dashboard进入管理页面"></a>7) 点击Continue To Dashboard进入管理页面</h2><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241208597.png" alt=""></p><p>点击<code>Visit</code>即可进入vercel官方分配的网址</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241211855.png" alt=""></p><h1 id="绑定自定义域名（可选）"><a href="#绑定自定义域名（可选）" class="headerlink" title="绑定自定义域名（可选）"></a>绑定自定义域名（可选）</h1><p>选中自己的项目-打开下图-View Domains</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242111478.png" alt=""></p><p>将自己要绑定的域名填入以下的位置并ADD增加</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242112332.png" alt=""></p><p>此时他会要求我们做如下CNAME</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242121663.png" alt=""></p><p>那么我们将自己的域名CNAME到vercel给你的域名即可</p><p>打开Cloudflare做如下配置</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242120271.png" alt=""></p><p>添加一条点下保存，再添加下一条</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242123056.png" alt=""></p><p>稍微等待一会，刷新，直到没有错误提示即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242124806.png" alt=""></p><p>此时(有可能还得等待一会5分钟)就可以用自己的域名来访问了</p><p>Demo:</p><p><a href="https://www.mzlfreegpt.eu.org/">https://www.mzlfreegpt.eu.org/</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242128213.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站 </tag>
+            
+            <tag> chatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>永久免费域名注册eu.org</title>
+      <link href="/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/"/>
+      <url>/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/</url>
+      
+        <content type="html"><![CDATA[<p><strong>简介：<a href="https://nic.eu.org">EU.org</a>, free domain names since 1996</strong></p><h1 id="一、注册账号"><a href="#一、注册账号" class="headerlink" title="一、注册账号"></a>一、注册账号</h1><p>首先进入注册页面注册一个网站的账号<br>打开<br><a href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a><br>点击Register注册</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241016334.png" alt=""></p><p>按照报错提示要求补充其他信息</p><p>可以参考地址生成器生成地址<br><a href="https://www.meiguodizhi.com/">https://www.meiguodizhi.com/</a></p><h1 id="二、注册成功"><a href="#二、注册成功" class="headerlink" title="二、注册成功"></a>二、注册成功</h1><p>注册账号成功以后，邮箱会收到一份激活邮件，按要求激活即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241028759.png" alt=""></p><h1 id="三、申请域名"><a href="#三、申请域名" class="headerlink" title="三、申请域名"></a>三、申请域名</h1><p>登录成功以后新创建一个域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241030170.png" alt=""></p><p>dns地址可以填写这这个<br><code>edmund.dnspod.net</code><br><code>dempsey.dnspod.net</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241047593.png" alt=""></p><h1 id="四、等待审核"><a href="#四、等待审核" class="headerlink" title="四、等待审核"></a>四、等待审核</h1><p><img src="D:\typora图片\image-20230324105120733.png" alt="image-20230324105120733"></p><p>没有错误，就代表成功了，剩下的就是等待，一两天的样子。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242027609.png" alt=""></p><h1 id="五、绑定Cloudflare"><a href="#五、绑定Cloudflare" class="headerlink" title="五、绑定Cloudflare"></a>五、绑定Cloudflare</h1><p>注册Cloudflare账号<br><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p><p>登录Cloudflare账号</p><p>添加站点-填入自己要绑定的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242031222.png" alt=""></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242036935.png" alt=""></p><p>选择免费</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242037418.png" alt=""></p><p>添加  Cloudflare  名称服务器</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242042128.png" alt=""></p><p>在eu.org中-选择自己的域名-Nameservers</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242043921.png" alt=""></p><p>将Cloudflare中的两个地址替换到这里，选择server names，Submit提交</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242049778.png" alt=""></p><p>添加完后，cloudflare个人主页的 <code>网站</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242051929.png" alt=""></p><p>等待一段时间（不到一小时）</p><p>即可收到绑定成功的邮件-变成了这样-有效</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242110748.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenSSL SSL_read：Connection was reset, errno 10054</title>
       <link href="/post/OpenSSL%20SSL_read%20errno%2010054/"/>
       <url>/post/OpenSSL%20SSL_read%20errno%2010054/</url>
@@ -572,9 +624,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -583,9 +635,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
