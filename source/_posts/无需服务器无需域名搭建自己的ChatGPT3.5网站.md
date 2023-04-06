@@ -36,6 +36,8 @@ toc_number: false
 https://github.com/nezha001/chatgpt-ywsj
 登录好自己的GitHub账号
 
+[***<u>其他类似项目见最后</u>***](#others)
+
 ## 2)点击项目左下侧的Deploy进入Vercel页面
 
 ![](https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241152265.png)
@@ -102,6 +104,21 @@ https://github.com/nezha001/chatgpt-ywsj
 
 Demo:
 
-https://www.mzlfreegpt.eu.org/
+~~https://www.mzlfreegpt.eu.org/~~
 
 ![](https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242128213.png)
+
+
+
+# 结束
+
+<a name="others"></a>
+
+其他类似项目：
+
+- https://github.com/Chanzhaoyu/chatgpt-web
+
+  
+
+- https://github.com/ourongxing/chatgpt-vercel
+

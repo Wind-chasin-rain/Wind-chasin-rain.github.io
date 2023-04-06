@@ -13,9 +13,11 @@ highlight_shrink:
 
 ## 🌟 ***相关网站***
 
-- **ChatGPT**：https://www.mzlfreegpt.eu.org
+- **ChatGPT：https://gpt.windcrain.top**
 
+  
 
+- **网易云音乐播放器：https://music.windcrain.top**
 
 
 
