@@ -7,6 +7,7 @@ tags:
  - 网站
 updated:
 categories: 技术分享
+description: 本文将介绍如何通过iAPP将你的网站制作成APP
 mathjax:
 toc: true
 toc_number: false
@@ -56,7 +57,7 @@ iAPP是一款在手机上制作APP的应用，可以在应用商店搜索到。
 
 我们需要在载入事件面板中填写代码
 
-```
+```php
 s a="https://www.doubt-fact.top"
 
 //s申明一个变量,设置变量a为网址
@@ -88,7 +89,7 @@ hs("del cookie")
 
 输入以下代码
 
-```
+```php
 f(st_kC==4)
 
 //按下返回键

@@ -4,7 +4,8 @@ date: 2023-03-25 19:57:55
 cover: https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303251923677.jpeg
 tags: AI
 updated:
-categories: 软件资源
+categories: 工具资源
+description: 文本、绘画、音频、视频的AI工具合集
 mathjax:
 toc: true
 toc_number: false

@@ -25,7 +25,7 @@ hexo d
 
 **<big>⭕  解决方案</big>**
 
-1. 邮箱问题
+1.邮箱问题
 
 查看用户名，邮箱
 
@@ -48,7 +48,7 @@ git remote rm origin
 git remote add origin https://github.com/XXX
 ```
 
-2. 解除SSL认证
+2.解除SSL认证
 
 在 Git Bash 中输入以下命令：
 
@@ -56,7 +56,7 @@ git remote add origin https://github.com/XXX
 git config --global http.sslVerify "false"
 ```
 
-3. 更新 DNS 缓存
+3.更新 DNS 缓存
 
 cmd 窗口输入
 
@@ -64,7 +64,7 @@ cmd 窗口输入
 ipconfig /flushdns
 ```
 
-4. 文件过大，超过上限
+4.文件过大，超过上限
 
 修改为 500MB，在 Git Bash 中输入以下命令：
 

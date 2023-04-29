@@ -13,7 +13,15 @@ highlight_shrink:
 
 ## 🌟 ***相关网站***
 
-- **ChatGPT：https://gpt.windcrain.top**
+- **MzLmh主页：https://zy.mzlmh.top**
+
+  
+
+- **MzLmh导航：https://mzlmh.top**
+
+  
+
+- **ChatGPT：https://ss.windcrain.top**
 
   
 
