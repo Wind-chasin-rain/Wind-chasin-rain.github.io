@@ -91,7 +91,7 @@ public class Java8Tester {
 - Lambda 表达式主要用来定义行内执行的方法类型接口（例如，一个简单方法接口）。在上面例子中，我们使用各种类型的 Lambda 表达式来定义 MathOperation 接口的方法，然后我们定义了 operation 的执行。
 - Lambda 表达式免去了使用匿名方法的麻烦，并且给予 Java 简单但是强大的函数化的编程能力。
 
-</br>
+<br>
 
 ## 函数式接口
 
@@ -100,7 +100,7 @@ public class Java8Tester {
 - 我们可以在一个接口上使用 `@FunctionalInterface` 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含一条声明，说明这个接口是一个函数式接口。
 - 在`java.util.function`包下定义了Java 8 的丰富的函数式接口
 
-</br>
+<br>
 
 ## 常用接口
 
@@ -178,7 +178,7 @@ public class Java8Tester {
 | IntPredicate     | boolean test(int value)    | 接收一个int值    |
 | LongPredicate    | boolean test(long  value)  | 接收一个long值   |
 
-</br>
+<br>
 
 # 引用
 
@@ -330,7 +330,7 @@ Lambda表达式是可以简化函数式接口的变量或形参赋值的语法�
   }
   ```
 
-  </br>
+<br>
 
 ## 构造器引用
 
@@ -378,7 +378,7 @@ class Dog {
 }
 ```
 
-</br>
+<br>
 
 ## 数组构造引用
 
@@ -400,7 +400,7 @@ public void test4(){
 }
 ```
 
-</br>
+<br>
 
 # Stream API
 
@@ -420,7 +420,7 @@ Stream 和 Collection 集合的区别：**Collection 是一种静态的内存数
 
 ④ Stream一旦执行了终止操作，就不能再调用其它中间操作或终止操作了。
 
-</br>
+<br>
 
 ## Stream的操作三个步骤
 
@@ -899,7 +899,7 @@ public class StreamEndding {
 }
 ```
 
-</br>
+<br>
 
 # 新语法结构
 
@@ -910,6 +910,8 @@ public class StreamEndding {
 Java 终于拥有了像Python 和 Scala 之类语言的REPL工具（交互式编程环境，read - evaluate - print - loop）：`jShell`。以交互式的方式对语句和表达式进行求值。`即写即得`、`快速运行`。
 
 利用jShell在没有创建类的情况下，在命令行里直接声明变量，计算表达式，执行语句。无需跟人解释”public static void main(String[] args)”这句"废话"。
+
+<br>
 
 ## 异常处理之try-catch资源关闭
 
@@ -970,7 +972,7 @@ public void test04() {
 }
 ```
 
-</br>
+<br>
 
 ## 局部变量类型推断
 
@@ -1013,7 +1015,7 @@ var iterator = set.iterator();
   - Lambda表达式中函数式接口的类型
   - 方法引用中函数式接口的类型
 
-</br>
+<br>
 
 ## instanceof的模式匹配
 
@@ -1112,7 +1114,7 @@ class Monitor{
 }
 ```
 
-</br>
+<br>
 
 ## switch表达式
 
@@ -1187,7 +1189,7 @@ public void testSwitch3() {
 }
 ```
 
-</br>
+<br>
 
 ## 文本块
 
@@ -1249,7 +1251,7 @@ String empty = """
 
 JDK14的版本主要增加了两个escape sequences，分别是` \  取消换行 `与`\s  空格`。
 
-</br>
+<br>
 
 ## Record
 
@@ -1293,7 +1295,7 @@ public class Java14Record {
 
 record的设计目标是提供一种将数据建模为数据的好方法。它也不是 JavaBeans 的直接替代品，因为record的方法不符合 JavaBeans 的 get 标准。另外 JavaBeans 通常是可变的，而记录是不可变的。尽管它们的用途有点像，但记录并不会以某种方式取代 JavaBean。
 
-</br>
+<br>
 
 ## 密封类
 
@@ -1330,7 +1332,7 @@ public final class FilledRectangle extends Rectangle {...}
 public non-sealed class Square extends Shape {...} //non-sealed表示可以允许任何类继承
 ```
 
-</br>
+<br>
 
 # 其它变化
 
@@ -1445,7 +1447,7 @@ public class TestOptional {
 | Stream<T> stream()                                           | value非空，返回仅包含此value的Stream；否则，返回一个空的Stream | JDK  9         |
 | T orElseThrow()                                              | value非空，返回value；否则抛异常NoSuchElementException       | JDK  10        |
 
-</br>
+<br>
 
 ## GC方面新特性
 
