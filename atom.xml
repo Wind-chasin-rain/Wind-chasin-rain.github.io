@@ -3,11 +3,11 @@
   <title>windCrain</title>
   
   
-  <link href="https://windcrain.top/atom.xml" rel="self"/>
+  <link href="https://blog.lovemzl.eu.org/atom.xml" rel="self"/>
   
-  <link href="https://windcrain.top/"/>
-  <updated>2023-12-29T09:22:34.326Z</updated>
-  <id>https://windcrain.top/</id>
+  <link href="https://blog.lovemzl.eu.org/"/>
+  <updated>2024-02-19T03:45:19.021Z</updated>
+  <id>https://blog.lovemzl.eu.org/</id>
   
   <author>
     <name>麦子落</name>
@@ -18,29 +18,29 @@
   
   <entry>
     <title>用Docker部署GeminiPro Chat项目</title>
-    <link href="https://windcrain.top/post/%E7%94%A8Docker%E9%83%A8%E7%BD%B2GeminiPro%20Chat%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://windcrain.top/post/%E7%94%A8Docker%E9%83%A8%E7%BD%B2GeminiPro%20Chat%E9%A1%B9%E7%9B%AE/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E7%94%A8Docker%E9%83%A8%E7%BD%B2GeminiPro%20Chat%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E7%94%A8Docker%E9%83%A8%E7%BD%B2GeminiPro%20Chat%E9%A1%B9%E7%9B%AE/</id>
     <published>2023-12-29T09:07:55.000Z</published>
-    <updated>2023-12-29T09:22:34.326Z</updated>
+    <updated>2024-02-19T03:45:19.021Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p><a href="https://gg.windcrain.top/">https://gg.windcrain.top/</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291707986.png" alt=""></p><p><br></p><h1 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h1><p>1）一台服务器</p><p>2）此项目的github<br><a href="https://github.com/babaohuang/GeminiProChat">https://github.com/babaohuang/GeminiProChat</a></p><p>3）一个谷歌账号<br>用来获取免费的API<br><a href="https://makersuite.google.com/app/apikey">https://makersuite.google.com/app/apikey</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291555312.png" alt=""></p><p><br></p><h1 id="一、Docker环境部署"><a href="#一、Docker环境部署" class="headerlink" title="一、Docker环境部署"></a>一、Docker环境部署</h1><p><strong>docker安装脚本</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)</span><br></pre></td></tr></table></figure><p><strong>docker-compose安装脚本</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose &amp;&amp; chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><p><br></p><h1 id="二、创建docker-compose-yml文件"><a href="#二、创建docker-compose-yml文件" class="headerlink" title="二、创建docker-compose.yml文件"></a>二、创建docker-compose.yml文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo -i <span class="comment">#切换到root用户</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /root/data/docker_data/GeminiProChat <span class="comment">#创建一个目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /root/data/docker_data/GeminiProChat</span><br><span class="line"></span><br><span class="line">vim docker-compose.yml  </span><br><span class="line"></span><br><span class="line"><span class="comment">#英文输入法下，按 i进入编辑</span></span><br><span class="line"><span class="comment">#esc退出编辑</span></span><br><span class="line"><span class="comment"># :wq保存退出</span></span><br><span class="line"><span class="comment"># :q退出  :q!强制退出</span></span><br></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span>  <span class="comment"># 这是一个Docker Compose文件的版本声明，它表明该文件符合Docker Compose文件格式版本3.3</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">ywsj_gemini:</span>   <span class="comment">#服务名，可以自定义</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">ywsj_gemini</span>    <span class="comment">#容器名，可以自定义</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;3000:3000&#x27;</span>   <span class="comment"># 冒号:左边的3000可以改成任意vps上未使用过的端口记得打开防火墙,冒号右边是本docker镜像里的端口</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">PUID=0</span>    <span class="comment"># 用户ID,在终端输入id可以查看当前用户的id</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">PGID=0</span>    <span class="comment"># 组ID同上</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span>  <span class="comment">#时区，可以自定义</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">GEMINI_API_KEY=AIlls3SyAZAoLx6TO2W40ojhWUJf_uqEKwGp5NqFU</span>   <span class="comment">#这里填自己准备条件上获取到的谷歌AI的API</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span>    <span class="comment">#开启自启动其他选项看以下备注</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">babaohuang/geminiprochat:latest</span>    <span class="comment">#镜像名一般都是使用的哪个镜像就写哪个镜像。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><br></p><h1 id="三、执行容器运行命令"><a href="#三、执行容器运行命令" class="headerlink" title="三、执行容器运行命令"></a>三、执行容器运行命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d <span class="comment">#运行容器</span></span><br><span class="line"></span><br><span class="line">docker-compose ps  <span class="comment">#查看是否开启成功</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><br></p><h1 id="四、打开web页面使用"><a href="#四、打开web页面使用" class="headerlink" title="四、打开web页面使用"></a>四、打开web页面使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://ip:8181   <span class="comment">#打开自己VPS的端口加ip进入web页面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#可以绑定域名来访问</span></span><br></pre></td></tr></table></figure><p><br></p><h1 id="五、更新网站"><a href="#五、更新网站" class="headerlink" title="五、更新网站"></a>五、更新网站</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/data/docker_data/GeminiProChat   <span class="comment">#进入项目目录</span></span><br><span class="line"></span><br><span class="line">docker-compose down <span class="comment">#停止容器</span></span><br><span class="line"></span><br><span class="line">docker-compose pull <span class="comment">#拉取最新镜像</span></span><br><span class="line"></span><br><span class="line">docker-compose up -d <span class="comment">#启动新容器</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p><a href="https://gg.mzlmh.top/">https://gg.mzlmh.top/</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291707986.png" alt=""></p><p><br></p><h1 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h1><p>1）一台服务器</p><p>2）此项目的github<br><a href="https://github.com/babaohuang/GeminiProChat">https://github.com/babaohuang/GeminiProChat</a></p><p>3）一个谷歌账号<br>用来获取免费的API<br><a href="https://makersuite.google.com/app/apikey">https://makersuite.google.com/app/apikey</a></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291555312.png" alt=""></p><p><br></p><h1 id="一、Docker环境部署"><a href="#一、Docker环境部署" class="headerlink" title="一、Docker环境部署"></a>一、Docker环境部署</h1><p><strong>docker安装脚本</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)</span><br></pre></td></tr></table></figure><p><strong>docker-compose安装脚本</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose &amp;&amp; chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><p><br></p><h1 id="二、创建docker-compose-yml文件"><a href="#二、创建docker-compose-yml文件" class="headerlink" title="二、创建docker-compose.yml文件"></a>二、创建docker-compose.yml文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo -i <span class="comment">#切换到root用户</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /root/data/docker_data/GeminiProChat <span class="comment">#创建一个目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /root/data/docker_data/GeminiProChat</span><br><span class="line"></span><br><span class="line">vim docker-compose.yml  </span><br><span class="line"></span><br><span class="line"><span class="comment">#英文输入法下，按 i进入编辑</span></span><br><span class="line"><span class="comment">#esc退出编辑</span></span><br><span class="line"><span class="comment"># :wq保存退出</span></span><br><span class="line"><span class="comment"># :q退出  :q!强制退出</span></span><br></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span>  <span class="comment"># 这是一个Docker Compose文件的版本声明，它表明该文件符合Docker Compose文件格式版本3.3</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">ywsj_gemini:</span>   <span class="comment">#服务名，可以自定义</span></span><br><span class="line">        <span class="attr">container_name:</span> <span class="string">ywsj_gemini</span>    <span class="comment">#容器名，可以自定义</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">&#x27;3000:3000&#x27;</span>   <span class="comment"># 冒号:左边的3000可以改成任意vps上未使用过的端口记得打开防火墙,冒号右边是本docker镜像里的端口</span></span><br><span class="line">        <span class="attr">environment:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">PUID=0</span>    <span class="comment"># 用户ID,在终端输入id可以查看当前用户的id</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">PGID=0</span>    <span class="comment"># 组ID同上</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span>  <span class="comment">#时区，可以自定义</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">GEMINI_API_KEY=AIlls3SyAZAoLx6TO2W40ojhWUJf_uqEKwGp5NqFU</span>   <span class="comment">#这里填自己准备条件上获取到的谷歌AI的API</span></span><br><span class="line">        <span class="attr">restart:</span> <span class="string">always</span>    <span class="comment">#开启自启动其他选项看以下备注</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">babaohuang/geminiprochat:latest</span>    <span class="comment">#镜像名一般都是使用的哪个镜像就写哪个镜像。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><br></p><h1 id="三、执行容器运行命令"><a href="#三、执行容器运行命令" class="headerlink" title="三、执行容器运行命令"></a>三、执行容器运行命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d <span class="comment">#运行容器</span></span><br><span class="line"></span><br><span class="line">docker-compose ps  <span class="comment">#查看是否开启成功</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><br></p><h1 id="四、打开web页面使用"><a href="#四、打开web页面使用" class="headerlink" title="四、打开web页面使用"></a>四、打开web页面使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://ip:8181   <span class="comment">#打开自己VPS的端口加ip进入web页面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#可以绑定域名来访问</span></span><br></pre></td></tr></table></figure><p><br></p><h1 id="五、更新网站"><a href="#五、更新网站" class="headerlink" title="五、更新网站"></a>五、更新网站</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/data/docker_data/GeminiProChat   <span class="comment">#进入项目目录</span></span><br><span class="line"></span><br><span class="line">docker-compose down <span class="comment">#停止容器</span></span><br><span class="line"></span><br><span class="line">docker-compose pull <span class="comment">#拉取最新镜像</span></span><br><span class="line"></span><br><span class="line">docker-compose up -d <span class="comment">#启动新容器</span></span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">用Docker和谷歌Gemini-API私有化部署GeminiPro Chat项目</summary>
     
     
     
-    <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.lovemzl.eu.org/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="Docker" scheme="https://windcrain.top/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.lovemzl.eu.org/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习03</title>
-    <link href="https://windcrain.top/post/Linux03/"/>
-    <id>https://windcrain.top/post/Linux03/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Linux03/"/>
+    <id>https://blog.lovemzl.eu.org/post/Linux03/</id>
     <published>2023-07-19T10:07:55.000Z</published>
     <updated>2023-07-22T15:54:30.362Z</updated>
     
@@ -51,19 +51,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Linux" scheme="https://windcrain.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog.lovemzl.eu.org/tags/Linux/"/>
     
-    <category term="Shell" scheme="https://windcrain.top/tags/Shell/"/>
+    <category term="Shell" scheme="https://blog.lovemzl.eu.org/tags/Shell/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习02</title>
-    <link href="https://windcrain.top/post/Linux02/"/>
-    <id>https://windcrain.top/post/Linux02/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Linux02/"/>
+    <id>https://blog.lovemzl.eu.org/post/Linux02/</id>
     <published>2023-07-16T11:37:55.000Z</published>
     <updated>2023-07-22T15:54:30.362Z</updated>
     
@@ -74,19 +74,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Linux" scheme="https://windcrain.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog.lovemzl.eu.org/tags/Linux/"/>
     
-    <category term="CentOS" scheme="https://windcrain.top/tags/CentOS/"/>
+    <category term="CentOS" scheme="https://blog.lovemzl.eu.org/tags/CentOS/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习01</title>
-    <link href="https://windcrain.top/post/Linux01/"/>
-    <id>https://windcrain.top/post/Linux01/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Linux01/"/>
+    <id>https://blog.lovemzl.eu.org/post/Linux01/</id>
     <published>2023-07-12T10:30:55.000Z</published>
     <updated>2023-07-22T15:54:30.361Z</updated>
     
@@ -97,19 +97,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Linux" scheme="https://windcrain.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog.lovemzl.eu.org/tags/Linux/"/>
     
-    <category term="CentOS" scheme="https://windcrain.top/tags/CentOS/"/>
+    <category term="CentOS" scheme="https://blog.lovemzl.eu.org/tags/CentOS/"/>
     
   </entry>
   
   <entry>
     <title>Vue3前端框架</title>
-    <link href="https://windcrain.top/post/Vue3/"/>
-    <id>https://windcrain.top/post/Vue3/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Vue3/"/>
+    <id>https://blog.lovemzl.eu.org/post/Vue3/</id>
     <published>2023-07-10T08:31:55.000Z</published>
     <updated>2023-07-22T15:54:30.363Z</updated>
     
@@ -120,19 +120,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="前端" scheme="https://windcrain.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://blog.lovemzl.eu.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="Vue" scheme="https://windcrain.top/tags/Vue/"/>
+    <category term="Vue" scheme="https://blog.lovemzl.eu.org/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>TypeScript基础</title>
-    <link href="https://windcrain.top/post/TypeScript/"/>
-    <id>https://windcrain.top/post/TypeScript/</id>
+    <link href="https://blog.lovemzl.eu.org/post/TypeScript/"/>
+    <id>https://blog.lovemzl.eu.org/post/TypeScript/</id>
     <published>2023-07-09T08:31:55.000Z</published>
     <updated>2023-07-22T15:54:30.362Z</updated>
     
@@ -143,19 +143,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="前端" scheme="https://windcrain.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://blog.lovemzl.eu.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="TypeScript" scheme="https://windcrain.top/tags/TypeScript/"/>
+    <category term="TypeScript" scheme="https://blog.lovemzl.eu.org/tags/TypeScript/"/>
     
   </entry>
   
   <entry>
     <title>Java前端技术基础</title>
-    <link href="https://windcrain.top/post/Java%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
-    <id>https://windcrain.top/post/Java%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Java%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    <id>https://blog.lovemzl.eu.org/post/Java%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</id>
     <published>2023-07-05T01:57:55.000Z</published>
     <updated>2023-07-22T15:54:30.361Z</updated>
     
@@ -166,23 +166,23 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="前端" scheme="https://windcrain.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://blog.lovemzl.eu.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="HTML" scheme="https://windcrain.top/tags/HTML/"/>
+    <category term="HTML" scheme="https://blog.lovemzl.eu.org/tags/HTML/"/>
     
-    <category term="CSS" scheme="https://windcrain.top/tags/CSS/"/>
+    <category term="CSS" scheme="https://blog.lovemzl.eu.org/tags/CSS/"/>
     
-    <category term="JavaScript" scheme="https://windcrain.top/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://blog.lovemzl.eu.org/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Git快速入门</title>
-    <link href="https://windcrain.top/post/Git%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>https://windcrain.top/post/Git%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Git%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>https://blog.lovemzl.eu.org/post/Git%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</id>
     <published>2023-05-23T07:05:08.000Z</published>
     <updated>2023-05-27T03:11:56.371Z</updated>
     
@@ -193,17 +193,17 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="git" scheme="https://windcrain.top/tags/git/"/>
+    <category term="git" scheme="https://blog.lovemzl.eu.org/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>Java 8 新特性</title>
-    <link href="https://windcrain.top/post/Java%208%20%E6%96%B0%E7%89%B9%E6%80%A7/"/>
-    <id>https://windcrain.top/post/Java%208%20%E6%96%B0%E7%89%B9%E6%80%A7/</id>
+    <link href="https://blog.lovemzl.eu.org/post/Java%208%20%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>https://blog.lovemzl.eu.org/post/Java%208%20%E6%96%B0%E7%89%B9%E6%80%A7/</id>
     <published>2023-05-20T06:55:08.000Z</published>
     <updated>2023-05-27T03:11:56.374Z</updated>
     
@@ -214,17 +214,17 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://windcrain.top/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lovemzl.eu.org/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>免费临时邮箱合集</title>
-    <link href="https://windcrain.top/post/%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1%E5%90%88%E9%9B%86/"/>
-    <id>https://windcrain.top/post/%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1%E5%90%88%E9%9B%86/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1%E5%90%88%E9%9B%86/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1%E5%90%88%E9%9B%86/</id>
     <published>2023-05-18T02:34:08.000Z</published>
     <updated>2023-05-27T03:11:56.379Z</updated>
     
@@ -235,17 +235,17 @@
     
     
     
-    <category term="工具资源" scheme="https://windcrain.top/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
+    <category term="工具资源" scheme="https://blog.lovemzl.eu.org/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
     
     
-    <category term="邮箱" scheme="https://windcrain.top/tags/%E9%82%AE%E7%AE%B1/"/>
+    <category term="邮箱" scheme="https://blog.lovemzl.eu.org/tags/%E9%82%AE%E7%AE%B1/"/>
     
   </entry>
   
   <entry>
     <title>高速交通摄像头实时监控视频</title>
-    <link href="https://windcrain.top/post/%E9%AB%98%E9%80%9F%E4%BA%A4%E9%80%9A%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E8%A7%86%E9%A2%91/"/>
-    <id>https://windcrain.top/post/%E9%AB%98%E9%80%9F%E4%BA%A4%E9%80%9A%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E8%A7%86%E9%A2%91/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E9%AB%98%E9%80%9F%E4%BA%A4%E9%80%9A%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E8%A7%86%E9%A2%91/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E9%AB%98%E9%80%9F%E4%BA%A4%E9%80%9A%E6%91%84%E5%83%8F%E5%A4%B4%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E8%A7%86%E9%A2%91/</id>
     <published>2023-04-29T13:07:08.000Z</published>
     <updated>2023-05-27T03:11:56.380Z</updated>
     
@@ -256,17 +256,17 @@
     
     
     
-    <category term="工具资源" scheme="https://windcrain.top/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
+    <category term="工具资源" scheme="https://blog.lovemzl.eu.org/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
     
     
-    <category term="视频" scheme="https://windcrain.top/tags/%E8%A7%86%E9%A2%91/"/>
+    <category term="视频" scheme="https://blog.lovemzl.eu.org/tags/%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
   <entry>
     <title>如何将网页做成APP</title>
-    <link href="https://windcrain.top/post/%E5%A6%82%E4%BD%95%E5%B0%86%E7%BD%91%E9%A1%B5%E5%81%9A%E6%88%90APP/"/>
-    <id>https://windcrain.top/post/%E5%A6%82%E4%BD%95%E5%B0%86%E7%BD%91%E9%A1%B5%E5%81%9A%E6%88%90APP/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E5%A6%82%E4%BD%95%E5%B0%86%E7%BD%91%E9%A1%B5%E5%81%9A%E6%88%90APP/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E5%A6%82%E4%BD%95%E5%B0%86%E7%BD%91%E9%A1%B5%E5%81%9A%E6%88%90APP/</id>
     <published>2023-04-03T02:29:08.000Z</published>
     <updated>2023-05-27T03:11:56.379Z</updated>
     
@@ -277,19 +277,19 @@
     
     
     
-    <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.lovemzl.eu.org/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="APP" scheme="https://windcrain.top/tags/APP/"/>
+    <category term="APP" scheme="https://blog.lovemzl.eu.org/tags/APP/"/>
     
-    <category term="网站" scheme="https://windcrain.top/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://blog.lovemzl.eu.org/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>AI工具合集</title>
-    <link href="https://windcrain.top/post/AI%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/"/>
-    <id>https://windcrain.top/post/AI%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</id>
+    <link href="https://blog.lovemzl.eu.org/post/AI%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/"/>
+    <id>https://blog.lovemzl.eu.org/post/AI%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</id>
     <published>2023-03-25T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.370Z</updated>
     
@@ -300,42 +300,17 @@
     
     
     
-    <category term="工具资源" scheme="https://windcrain.top/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
+    <category term="工具资源" scheme="https://blog.lovemzl.eu.org/categories/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"/>
     
     
-    <category term="AI" scheme="https://windcrain.top/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>永久免费域名注册eu.org</title>
-    <link href="https://windcrain.top/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/"/>
-    <id>https://windcrain.top/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/</id>
-    <published>2023-03-24T11:57:55.000Z</published>
-    <updated>2023-05-27T03:11:56.379Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>简介：<a href="https://nic.eu.org">EU.org</a>, free domain names since 1996</strong></p><h1 id="一、注册账号"><a href="#一、注册账号" class="headerlink" title="一、注册账号"></a>一、注册账号</h1><p>首先进入注册页面注册一个网站的账号<br>打开<br><a href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a><br>点击Register注册</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241016334.png" alt=""></p><p>按照报错提示要求补充其他信息</p><p>可以参考地址生成器生成地址<br><a href="https://www.meiguodizhi.com/">https://www.meiguodizhi.com/</a></p><h1 id="二、注册成功"><a href="#二、注册成功" class="headerlink" title="二、注册成功"></a>二、注册成功</h1><p>注册账号成功以后，邮箱会收到一份激活邮件，按要求激活即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241028759.png" alt=""></p><h1 id="三、申请域名"><a href="#三、申请域名" class="headerlink" title="三、申请域名"></a>三、申请域名</h1><p>登录成功以后新创建一个域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241030170.png" alt=""></p><p>dns地址可以填写这这个<br><code>edmund.dnspod.net</code><br><code>dempsey.dnspod.net</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241047593.png" alt=""></p><h1 id="四、等待审核"><a href="#四、等待审核" class="headerlink" title="四、等待审核"></a>四、等待审核</h1><p><img src="D:\Typora\图片\202304022345330.png" alt=""></p><p>没有错误，就代表成功了，剩下的就是等待，一两天的样子。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242027609.png" alt=""></p><h1 id="五、绑定Cloudflare"><a href="#五、绑定Cloudflare" class="headerlink" title="五、绑定Cloudflare"></a>五、绑定Cloudflare</h1><p>注册Cloudflare账号<br><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p><p>登录Cloudflare账号</p><p>添加站点-填入自己要绑定的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242031222.png" alt=""></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242036935.png" alt=""></p><p>选择免费</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242037418.png" alt=""></p><p>添加  Cloudflare  名称服务器</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242042128.png" alt=""></p><p>在eu.org中-选择自己的域名-Nameservers</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242043921.png" alt=""></p><p>将Cloudflare中的两个地址替换到这里，选择server names，Submit提交</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242049778.png" alt=""></p><p>添加完后，cloudflare个人主页的 <code>网站</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242051929.png" alt=""></p><p>等待一段时间（不到一小时）</p><p>即可收到绑定成功的邮件-变成了这样-有效</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242110748.png" alt=""></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;简介：&lt;a href=&quot;https://nic.eu.org&quot;&gt;EU.org&lt;/a&gt;, free domain names since 1996&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;一、注册账号&quot;&gt;&lt;a href=&quot;#一、注册账号&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="域名" scheme="https://windcrain.top/tags/%E5%9F%9F%E5%90%8D/"/>
+    <category term="AI" scheme="https://blog.lovemzl.eu.org/tags/AI/"/>
     
   </entry>
   
   <entry>
     <title>无需服务器无需域名搭建自己的ChatGPT3.5网站</title>
-    <link href="https://windcrain.top/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/"/>
-    <id>https://windcrain.top/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/</id>
     <published>2023-03-24T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.379Z</updated>
     
@@ -350,19 +325,44 @@
     
     
     
-    <category term="技术分享" scheme="https://windcrain.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.lovemzl.eu.org/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="网站" scheme="https://windcrain.top/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://blog.lovemzl.eu.org/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="chatGPT" scheme="https://windcrain.top/tags/chatGPT/"/>
+    <category term="chatGPT" scheme="https://blog.lovemzl.eu.org/tags/chatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>永久免费域名注册eu.org</title>
+    <link href="https://blog.lovemzl.eu.org/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/</id>
+    <published>2023-03-24T11:57:55.000Z</published>
+    <updated>2023-05-27T03:11:56.379Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>简介：<a href="https://nic.eu.org">EU.org</a>, free domain names since 1996</strong></p><h1 id="一、注册账号"><a href="#一、注册账号" class="headerlink" title="一、注册账号"></a>一、注册账号</h1><p>首先进入注册页面注册一个网站的账号<br>打开<br><a href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a><br>点击Register注册</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241016334.png" alt=""></p><p>按照报错提示要求补充其他信息</p><p>可以参考地址生成器生成地址<br><a href="https://www.meiguodizhi.com/">https://www.meiguodizhi.com/</a></p><h1 id="二、注册成功"><a href="#二、注册成功" class="headerlink" title="二、注册成功"></a>二、注册成功</h1><p>注册账号成功以后，邮箱会收到一份激活邮件，按要求激活即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241028759.png" alt=""></p><h1 id="三、申请域名"><a href="#三、申请域名" class="headerlink" title="三、申请域名"></a>三、申请域名</h1><p>登录成功以后新创建一个域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241030170.png" alt=""></p><p>dns地址可以填写这这个<br><code>edmund.dnspod.net</code><br><code>dempsey.dnspod.net</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241047593.png" alt=""></p><h1 id="四、等待审核"><a href="#四、等待审核" class="headerlink" title="四、等待审核"></a>四、等待审核</h1><p><img src="D:\Typora\图片\202304022345330.png" alt=""></p><p>没有错误，就代表成功了，剩下的就是等待，一两天的样子。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242027609.png" alt=""></p><h1 id="五、绑定Cloudflare"><a href="#五、绑定Cloudflare" class="headerlink" title="五、绑定Cloudflare"></a>五、绑定Cloudflare</h1><p>注册Cloudflare账号<br><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p><p>登录Cloudflare账号</p><p>添加站点-填入自己要绑定的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242031222.png" alt=""></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242036935.png" alt=""></p><p>选择免费</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242037418.png" alt=""></p><p>添加  Cloudflare  名称服务器</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242042128.png" alt=""></p><p>在eu.org中-选择自己的域名-Nameservers</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242043921.png" alt=""></p><p>将Cloudflare中的两个地址替换到这里，选择server names，Submit提交</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242049778.png" alt=""></p><p>添加完后，cloudflare个人主页的 <code>网站</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242051929.png" alt=""></p><p>等待一段时间（不到一小时）</p><p>即可收到绑定成功的邮件-变成了这样-有效</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242110748.png" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;简介：&lt;a href=&quot;https://nic.eu.org&quot;&gt;EU.org&lt;/a&gt;, free domain names since 1996&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;一、注册账号&quot;&gt;&lt;a href=&quot;#一、注册账号&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.lovemzl.eu.org/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="域名" scheme="https://blog.lovemzl.eu.org/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>OpenSSL SSL_read：Connection was reset, errno 10054</title>
-    <link href="https://windcrain.top/post/OpenSSL%20SSL_read%20errno%2010054/"/>
-    <id>https://windcrain.top/post/OpenSSL%20SSL_read%20errno%2010054/</id>
+    <link href="https://blog.lovemzl.eu.org/post/OpenSSL%20SSL_read%20errno%2010054/"/>
+    <id>https://blog.lovemzl.eu.org/post/OpenSSL%20SSL_read%20errno%2010054/</id>
     <published>2023-03-23T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.375Z</updated>
     
@@ -377,17 +377,17 @@
     
     
     
-    <category term="疑难杂症" scheme="https://windcrain.top/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    <category term="疑难杂症" scheme="https://blog.lovemzl.eu.org/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-    <category term="git" scheme="https://windcrain.top/tags/git/"/>
+    <category term="git" scheme="https://blog.lovemzl.eu.org/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>笔记本键盘禁用</title>
-    <link href="https://windcrain.top/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/"/>
-    <id>https://windcrain.top/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E7%AC%94%E8%AE%B0%E6%9C%AC%E9%94%AE%E7%9B%98%E7%A6%81%E7%94%A8/</id>
     <published>2023-03-13T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.379Z</updated>
     
@@ -403,17 +403,17 @@
     
     
     
-    <category term="疑难杂症" scheme="https://windcrain.top/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    <category term="疑难杂症" scheme="https://blog.lovemzl.eu.org/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-    <category term="键盘" scheme="https://windcrain.top/tags/%E9%94%AE%E7%9B%98/"/>
+    <category term="键盘" scheme="https://blog.lovemzl.eu.org/tags/%E9%94%AE%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>正则表达式</title>
-    <link href="https://windcrain.top/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>https://windcrain.top/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <link href="https://blog.lovemzl.eu.org/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://blog.lovemzl.eu.org/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2022-10-16T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.379Z</updated>
     
@@ -424,17 +424,17 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="正则表达式" scheme="https://windcrain.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <category term="正则表达式" scheme="https://blog.lovemzl.eu.org/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>MySQL</title>
-    <link href="https://windcrain.top/post/MySQL/"/>
-    <id>https://windcrain.top/post/MySQL/</id>
+    <link href="https://blog.lovemzl.eu.org/post/MySQL/"/>
+    <id>https://blog.lovemzl.eu.org/post/MySQL/</id>
     <published>2022-08-17T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.375Z</updated>
     
@@ -445,17 +445,17 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="sql" scheme="https://windcrain.top/tags/sql/"/>
+    <category term="sql" scheme="https://blog.lovemzl.eu.org/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记03</title>
-    <link href="https://windcrain.top/post/JAVA03/"/>
-    <id>https://windcrain.top/post/JAVA03/</id>
+    <link href="https://blog.lovemzl.eu.org/post/JAVA03/"/>
+    <id>https://blog.lovemzl.eu.org/post/JAVA03/</id>
     <published>2022-08-12T11:57:55.000Z</published>
     <updated>2023-05-27T03:11:56.374Z</updated>
     
@@ -466,10 +466,10 @@
     
     
     
-    <category term="学习笔记" scheme="https://windcrain.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://blog.lovemzl.eu.org/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://windcrain.top/tags/Java/"/>
+    <category term="Java" scheme="https://blog.lovemzl.eu.org/tags/Java/"/>
     
   </entry>
   
