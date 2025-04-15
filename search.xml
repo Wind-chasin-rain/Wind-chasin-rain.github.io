@@ -347,6 +347,31 @@
     
     
     <entry>
+      <title>永久免费域名注册eu.org</title>
+      <link href="/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/"/>
+      <url>/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/</url>
+      
+        <content type="html"><![CDATA[<p><strong>简介：<a href="https://nic.eu.org">EU.org</a>, free domain names since 1996</strong></p><h1 id="一、注册账号"><a href="#一、注册账号" class="headerlink" title="一、注册账号"></a>一、注册账号</h1><p>首先进入注册页面注册一个网站的账号<br>打开<br><a href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a><br>点击Register注册</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241016334.png" alt=""></p><p>按照报错提示要求补充其他信息</p><p>可以参考地址生成器生成地址<br><a href="https://www.meiguodizhi.com/">https://www.meiguodizhi.com/</a></p><h1 id="二、注册成功"><a href="#二、注册成功" class="headerlink" title="二、注册成功"></a>二、注册成功</h1><p>注册账号成功以后，邮箱会收到一份激活邮件，按要求激活即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241028759.png" alt=""></p><h1 id="三、申请域名"><a href="#三、申请域名" class="headerlink" title="三、申请域名"></a>三、申请域名</h1><p>登录成功以后新创建一个域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241030170.png" alt=""></p><p>dns地址可以填写这这个<br><code>edmund.dnspod.net</code><br><code>dempsey.dnspod.net</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241047593.png" alt=""></p><h1 id="四、等待审核"><a href="#四、等待审核" class="headerlink" title="四、等待审核"></a>四、等待审核</h1><p><img src="D:\Typora\图片\202304022345330.png" alt=""></p><p>没有错误，就代表成功了，剩下的就是等待，一两天的样子。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242027609.png" alt=""></p><h1 id="五、绑定Cloudflare"><a href="#五、绑定Cloudflare" class="headerlink" title="五、绑定Cloudflare"></a>五、绑定Cloudflare</h1><p>注册Cloudflare账号<br><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p><p>登录Cloudflare账号</p><p>添加站点-填入自己要绑定的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242031222.png" alt=""></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242036935.png" alt=""></p><p>选择免费</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242037418.png" alt=""></p><p>添加  Cloudflare  名称服务器</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242042128.png" alt=""></p><p>在eu.org中-选择自己的域名-Nameservers</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242043921.png" alt=""></p><p>将Cloudflare中的两个地址替换到这里，选择server names，Submit提交</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242049778.png" alt=""></p><p>添加完后，cloudflare个人主页的 <code>网站</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242051929.png" alt=""></p><p>等待一段时间（不到一小时）</p><p>即可收到绑定成功的邮件-变成了这样-有效</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242110748.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>无需服务器无需域名搭建自己的ChatGPT3.5网站</title>
       <link href="/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/"/>
       <url>/post/%E6%97%A0%E9%9C%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E9%9C%80%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT3.5%E7%BD%91%E7%AB%99/</url>
@@ -366,31 +391,6 @@
             <tag> 网站 </tag>
             
             <tag> chatGPT </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>永久免费域名注册eu.org</title>
-      <link href="/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/"/>
-      <url>/post/%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8Ceu.org/</url>
-      
-        <content type="html"><![CDATA[<p><strong>简介：<a href="https://nic.eu.org">EU.org</a>, free domain names since 1996</strong></p><h1 id="一、注册账号"><a href="#一、注册账号" class="headerlink" title="一、注册账号"></a>一、注册账号</h1><p>首先进入注册页面注册一个网站的账号<br>打开<br><a href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a><br>点击Register注册</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241016334.png" alt=""></p><p>按照报错提示要求补充其他信息</p><p>可以参考地址生成器生成地址<br><a href="https://www.meiguodizhi.com/">https://www.meiguodizhi.com/</a></p><h1 id="二、注册成功"><a href="#二、注册成功" class="headerlink" title="二、注册成功"></a>二、注册成功</h1><p>注册账号成功以后，邮箱会收到一份激活邮件，按要求激活即可</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241028759.png" alt=""></p><h1 id="三、申请域名"><a href="#三、申请域名" class="headerlink" title="三、申请域名"></a>三、申请域名</h1><p>登录成功以后新创建一个域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241030170.png" alt=""></p><p>dns地址可以填写这这个<br><code>edmund.dnspod.net</code><br><code>dempsey.dnspod.net</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303241047593.png" alt=""></p><h1 id="四、等待审核"><a href="#四、等待审核" class="headerlink" title="四、等待审核"></a>四、等待审核</h1><p><img src="D:\Typora\图片\202304022345330.png" alt=""></p><p>没有错误，就代表成功了，剩下的就是等待，一两天的样子。</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242027609.png" alt=""></p><h1 id="五、绑定Cloudflare"><a href="#五、绑定Cloudflare" class="headerlink" title="五、绑定Cloudflare"></a>五、绑定Cloudflare</h1><p>注册Cloudflare账号<br><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p><p>登录Cloudflare账号</p><p>添加站点-填入自己要绑定的域名</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242031222.png" alt=""></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242036935.png" alt=""></p><p>选择免费</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242037418.png" alt=""></p><p>添加  Cloudflare  名称服务器</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242042128.png" alt=""></p><p>在eu.org中-选择自己的域名-Nameservers</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242043921.png" alt=""></p><p>将Cloudflare中的两个地址替换到这里，选择server names，Submit提交</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242049778.png" alt=""></p><p>添加完后，cloudflare个人主页的 <code>网站</code></p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242051929.png" alt=""></p><p>等待一段时间（不到一小时）</p><p>即可收到绑定成功的邮件-变成了这样-有效</p><p><img src="https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202303242110748.png" alt=""></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术分享 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
             
         </tags>
       
@@ -956,6 +956,17 @@
     
     
     <entry>
+      <title>关于博主</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎来到我的小站呀，很高兴遇见你！🤝"><a href="#欢迎来到我的小站呀，很高兴遇见你！🤝" class="headerlink" title="欢迎来到我的小站呀，很高兴遇见你！🤝"></a>欢迎来到我的小站呀，很高兴遇见你！🤝</h1><h2 id="🌟-相关网站"><a href="#🌟-相关网站" class="headerlink" title="🌟 相关网站"></a>🌟 <strong><em>相关网站</em></strong></h2><ul><li><strong>MzLmh主页：<a href="https://zy.mzlmh.top">https://zy.mzlmh.top</a></strong></li></ul><ul><li><strong>MzLmh导航：<a href="https://dh.mzlmh.top">https://dh.mzlmh.top</a></strong></li></ul><ul><li><strong>ChatGPT：<a href="https://ss.windcrain.top">https://ss.windcrain.top</a></strong></li></ul><ul><li><strong>网易云音乐播放器：<a href="https://music.windcrain.top">https://music.windcrain.top</a></strong></li></ul><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1393542028&auto=0&height=66"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -972,17 +983,6 @@
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于博主</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎来到我的小站呀，很高兴遇见你！🤝"><a href="#欢迎来到我的小站呀，很高兴遇见你！🤝" class="headerlink" title="欢迎来到我的小站呀，很高兴遇见你！🤝"></a>欢迎来到我的小站呀，很高兴遇见你！🤝</h1><h2 id="🌟-相关网站"><a href="#🌟-相关网站" class="headerlink" title="🌟 相关网站"></a>🌟 <strong><em>相关网站</em></strong></h2><ul><li><strong>MzLmh主页：<a href="https://zy.mzlmh.top">https://zy.mzlmh.top</a></strong></li></ul><ul><li><strong>MzLmh导航：<a href="https://dh.mzlmh.top">https://dh.mzlmh.top</a></strong></li></ul><ul><li><strong>ChatGPT：<a href="https://ss.windcrain.top">https://ss.windcrain.top</a></strong></li></ul><ul><li><strong>网易云音乐播放器：<a href="https://music.windcrain.top">https://music.windcrain.top</a></strong></li></ul><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1393542028&auto=0&height=66"></iframe>]]></content>
       
     </entry>
     
