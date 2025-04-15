@@ -16,9 +16,11 @@ toc_number: false
 
 # Demo
 
-https://gg.windcrain.top/
+https://gg.mzlmh.top/
 
 ![](https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291707986.png)
+
+<br>
 
 # 准备条件
 
@@ -33,7 +35,7 @@ https://makersuite.google.com/app/apikey
 
 ![](https://lmh-hexo-blog-img.oss-cn-hangzhou.aliyuncs.com/img/202312291555312.png)
 
-
+<br>
 
 # 一、Docker环境部署
 
@@ -49,7 +51,7 @@ bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/Docke
 curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 ```
 
-</br>
+<br>
 
 # 二、创建docker-compose.yml文件
 
@@ -85,7 +87,7 @@ services:
 
 ```
 
-</br>
+<br>
 
 # 三、执行容器运行命令
 
@@ -96,7 +98,7 @@ docker-compose ps  #查看是否开启成功
 
 ```
 
-</br>
+<br>
 
 #  四、打开web页面使用
 
@@ -106,7 +108,7 @@ http://ip:8181   #打开自己VPS的端口加ip进入web页面
 #可以绑定域名来访问
 ```
 
-</br>
+<br>
 
 # 五、更新网站
 
