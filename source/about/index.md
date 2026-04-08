@@ -13,19 +13,19 @@ highlight_shrink:
 
 ## 🌟 ***相关网站***
 
-- **MzLmh主页：https://zy.mzlmh.top**
+- **主页：https://zy.lovemzl.eu.org**
 
   
 
-- **MzLmh导航：https://dh.mzlmh.top**
+- **导航：https://dh.lovemzl.eu.org**
 
   
 
-- **ChatGPT：https://ss.windcrain.top**
+- **AI：https://gpt.lovemzl.eu.org**
 
   
 
-- **网易云音乐播放器：https://music.windcrain.top**
+- **今日热榜：https://hot.lovemzl.eu.org**
 
 
 
